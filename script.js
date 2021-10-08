@@ -17,7 +17,6 @@ function saveCity() {
 function getCityRepos() {
     var weatherApi = "https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid=a03b138e43edcdb411e3301ae7f6bfe2"
 
-// need to make 2 api calls. one to the one call and one to the current weather data for that city. Use the lat and lon from the current weather data to input into the one call so it can pull all the other information.
     listCity()
 }
 
@@ -31,3 +30,6 @@ function listCity() {
 }
 
 searchBtn.addEventListener("click", saveCity);
+
+// need to make 2 api calls. one to the one call and one to the current weather data for that city. Use the lat and lon from the current weather data to input into the one call so it can pull all the other information.
+// Use insomnia or postman for the API to get the information we would like.
