@@ -6,6 +6,7 @@ var currentTemp = document.querySelector(".currenttemp");
 var currentWind = document.querySelector(".currentwind");
 var currentHumidity = document.querySelector(".currenthumidity");
 var currentUv = document.querySelector(".currentuv");
+var searchHistory = document.querySelector(".searchhistory");
 
 var day1Date = document.querySelector(".day1date");
 var day2Date = document.querySelector(".day2date");
@@ -30,6 +31,12 @@ var day2Humidity = document.querySelector(".day2humidity");
 var day3Humidity = document.querySelector(".day3humidity");
 var day4Humidity = document.querySelector(".day4humidity");
 var day5Humidity = document.querySelector(".day5humidity");
+
+var weather1Image = document.querySelector(".weather1image")
+var weather2Image = document.querySelector(".weather2image")
+var weather3Image = document.querySelector(".weather3image")
+var weather4Image = document.querySelector(".weather4image")
+var weather5Image = document.querySelector(".weather5image")
 
 function saveCity() {
     var storedCity = cityInput.value.trim();
@@ -88,6 +95,18 @@ function forecast(lat, lon) {
                     day4Date.textContent = (new Date(data.daily[4].dt * 1000)).toLocaleDateString()
                     day5Date.textContent = (new Date(data.daily[5].dt * 1000)).toLocaleDateString()
 
+                    var iconCode1 = (data.daily[1].weather[0].icon)
+                    var iconCode2 = (data.daily[2].weather[0].icon)
+                    var iconCode3 = (data.daily[3].weather[0].icon)
+                    var iconCode4 = (data.daily[4].weather[0].icon)
+                    var iconCode5 = (data.daily[5].weather[0].icon)
+
+                    weather1Image.src = "http://openweathermap.org/img/wn/" + iconCode1 + ".png"
+                    weather2Image.src = "http://openweathermap.org/img/wn/" + iconCode2 + ".png"
+                    weather3Image.src = "http://openweathermap.org/img/wn/" + iconCode3 + ".png"
+                    weather4Image.src = "http://openweathermap.org/img/wn/" + iconCode4 + ".png"
+                    weather5Image.src = "http://openweathermap.org/img/wn/" + iconCode5 + ".png"
+
                     day1Temp.textContent = "Temp: " + data.daily[1].temp.day + " °F"
                     day2Temp.textContent = "Temp: " + data.daily[2].temp.day + " °F"
                     day3Temp.textContent = "Temp: " + data.daily[3].temp.day + " °F"
@@ -115,10 +134,8 @@ function listCity() {
     var newCity = document.createElement("button");
     newCity.textContent = (cityValue);
     newCity.className = ("cityName");
-    container.append(newCity);
-
+    searchHistory.append(newCity);
 }
-
 
 searchBtn.addEventListener("click", saveCity);
 
