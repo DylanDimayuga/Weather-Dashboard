@@ -22,6 +22,18 @@ body {
     padding-left: 10px;
 }
 
+.currentdaycontainer {
+    position: relative;
+}
+
+.currentweather {
+    position: absolute;
+    border: 1px solid black;
+    left: 335px;
+    top: -50px;
+    width: 81%;
+}
+
 .cityinput {
     width: 12%;
     margin-left: 15px;
@@ -48,6 +60,62 @@ body {
     width: 100.8%;
 }
 
+.daycontainer {
+    position: relative;
+}
+
+.forecast {
+    position: absolute;
+    left: 335px;
+    top: 55px;
+    height: 220px;
+}
+
+.day1 {
+    position: absolute;
+    background: lightblue;
+    left: 335px;
+    top: 105px;
+    height: 220px;
+    width: 173px;
+}
+
+.day2 {
+    position: absolute;
+    background: lightblue;
+    left: 535px;
+    top: 105px;
+    height: 220px;
+    width: 173px;
+}
+
+.day3 {
+    position: absolute;
+    background: lightblue;
+    left: 735px;
+    top: 105px;
+    height: 220px;
+    width: 173px;
+}
+
+.day4 {
+    position: absolute;
+    background: lightblue;
+    left: 935px;
+    top: 105px;
+    height: 220px;
+    width: 173px;
+}
+
+.day5 {
+    position: absolute;
+    background: lightblue;
+    left: 1135px;
+    top: 105px;
+    height: 220px;
+    width: 173px;
+}
+
 .cityName {
     text-decoration: none;
     color: black;
@@ -58,3 +126,4 @@ body {
     margin-top: 10px;
     text-align: center;
 }
+
