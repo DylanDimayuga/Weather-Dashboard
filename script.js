@@ -139,6 +139,4 @@ function listCity() {
 
 searchBtn.addEventListener("click", saveCity);
 
-// need to make 2 api calls. one to the one call and one to the current weather data for that city. Use the lat and lon from the current weather data to input into the one call so it can pull all the other information.
-// Use insomnia or postman for the API to get the information we would like.
 
